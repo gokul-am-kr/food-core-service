@@ -1,0 +1,37 @@
+    {
+        "id": 1,
+        "foodId": "Burger",
+        "foodName": "Burger",
+        "foodType": "VEG",
+        "foodDescription": "Value",
+        "quantity": 5,
+        "foodPrice": {
+            "priceId": 1,
+            "foodTotalPrice": 300,
+            "currencyCode": "INR",
+            "priceDetails": {
+                "id": 1,
+                "foodTotalPrice": 1300,
+                "currencyCode": "INR",
+                "tax": {
+                    "id": 1,
+                    "taxAmount": 300,
+                    "taxes": [
+                        {
+                            "id": 1,
+                            "taxCode": "CGST",
+                            "taxPrice": 200,
+                            "currencyCode": "INR"
+                        },
+                        {
+                            "id": 2,
+                            "taxCode": "GST",
+                            "taxPrice": 100,
+                            "currencyCode": "INR"
+                        }
+                    ],
+                    "currencyCode": "INR"
+                }
+            }
+        }
+    }

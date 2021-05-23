@@ -1,0 +1,7 @@
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2
+app:
+  end-point: https://api.airtable.com/v0/appJdTLUrvFOzRMUk/Table%201
