@@ -1,7 +1,12 @@
 spring:
-  h2:
-    console:
-      enabled: true
-      path: /h2
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://food-gate.ct3e3tldmxgd.ap-south-1.rds.amazonaws.com:3306/food_core?characterEncoding=utf8
+    username: admin
+    password: adminuser
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
 app:
   end-point: https://api.airtable.com/v0/appJdTLUrvFOzRMUk/Table%201

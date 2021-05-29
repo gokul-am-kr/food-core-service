@@ -17,7 +17,6 @@ import gk.food.core.service.response.FoodOrderResponseInterpreter;
 import gk.food.core.service.utility.ApiMessages;
 import gk.food.core.service.utility.FoodCoreEnums;
 import gk.food.food.core.service.processor.FoodOrderProcessor;
-import gk.food.food.core.service.processor.UserProcessor;
 
 /**
  * Service class related to food ordering.
@@ -44,11 +43,11 @@ public class FoodOrderService {
 	@Autowired
 	private FoodOrderResponseInterpreter foodOrderResponseInterpreter;
 
-	/**
-	 * Instance of UserProcessor
-	 */
-	@Autowired
-	private UserProcessor userProcessor;
+//	/**
+//	 * Instance of UserProcessor
+//	 */
+//	@Autowired
+//	private UserProcessor userProcessor;
 
 	/**
 	 * Method for order food.
@@ -63,7 +62,7 @@ public class FoodOrderService {
 		try {
 			usermodel.setUserName(foodOrderRequest.getUserName());
 			usermodel.setPassword(foodOrderRequest.getPassWord());
-			if (userProcessor.userLogin(null)) {
+			if (true) {
 				List<String> foodIds = foodOrderRequest.getFoodOrderList().stream().map(order -> order.getFoodId())
 				        .collect(Collectors.toList());
 				List<FoodEntity> foodEntityList = foodRepository.foodByIds(foodIds);
